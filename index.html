@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Messages</title>
+</head>
+<body>
+    <main>
+        <form @submit.prevent="setName">
+            <div v-if="name" id="output">Hello and welcome, {{name}}</div>
+            <!-- Se explica en app.js, pero la razón por la cual hemos creado dos inputs es para ver como se pueden coger los valores dentro de cada uno de ellos sin tener que usar v-models y de una forma sencilla utilizando el objeto FormData -->
+            <label>Name:</label><input id="inputName" name="inputName" type="text" placeholder="Type your name">
+            <label>Surname:</label><input id="inputName2" name="inputName2" type="text" placeholder="Type your name">
+            <input type="submit" value="Send"></input>
+        </form>
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
